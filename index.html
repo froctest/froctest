@@ -5,6 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
+<script>
+    function getUrlParam(name) {
+		//构造一个含有目标参数的正则表达式对象
+		var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+		//匹配目标参数
+		var r = window.location.search.substr(1).match(reg);
+		//返回参数值
+		if(r != null) {
+			return decodeURI(r[2]);
+		}
+		return null;
+    }
+    function decodeData(name)
+    {
+        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+        var r = window.location.search.substr(1).match(reg);
+        if (r != null) return unescape(r[2]);
+        return null;
+    }
+
+    var a=getUrlParam("a")
+    a=BigInt(a)
+    var b=getUrlParam("b")
+    b=BigInt(b)
+    alert(a**b)
+
+</script>
+
 <body>
     <h1>我的个人Gitpage小网站</h1>
  
@@ -15,6 +44,7 @@
     <a href="https://blog.csdn.net/qq_45967388?spm=1000.2115.3001.5343">来CSDN找我</a>
     <p></p>
     <p>QQ: 2268592181</p>
+    <p>API: 网址?a=值1&b=值2   计算[值1]的[值2]次方</p>
 
     <ul>
         <li>
