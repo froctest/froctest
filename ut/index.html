@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OCTest的Gitpage个人网站</title>
+</head>
+
+<script>
+    function getUrlParam(name) {
+		//构造一个含有目标参数的正则表达式对象
+		var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+		//匹配目标参数
+		var r = window.location.search.substr(1).match(reg);
+		//返回参数值
+		if(r != null) {
+			return decodeURI(r[2]);
+		}
+		return null;
+    }
+    function decodeData(name)
+    {
+        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+        var r = window.location.search.substr(1).match(reg);
+        if (r != null) return unescape(r[2]);
+        return null;
+    }
+
+    var a=getUrlParam("a")
+    a=BigInt(a)
+    var b=getUrlParam("b")
+    b=BigInt(b)
+    alert(a**b)
+
+</script>
+
+<body>
+    <h1>我的个人Gitpage小网站</h1>
+    <hr/>
+    <a href="aide/index.html">AIDE学习专区</a>
+    <hr/>
+ 
+    <p>创建时间2022年9业17日</p>
+
+    <p>为了证明我是这个网站创建者,我先
+        <strong>业</strong>
+        为敬
+    </p>
+    <h2>业~~~~~~~~~~~~</h2>
+
+    <a href="https://space.bilibili.com/485264494?spm_id_from=333.1007.0.0">来B站找我</a>
+    <p></p>
+    <a href="https://blog.csdn.net/qq_45967388?spm=1000.2115.3001.5343">来CSDN找我</a>
+    <p></p>
+    <p>QQ: 2268592181</p>
+    <p>想看我网站的源代码吗?在
+        <a href="https://github.com/froctest/froctest">这里</a>
+    </p>
+
+    <ul>
+        <li>
+            <p>图片</p>
+            <ul>
+                <li>
+                    <img src="U/A/BNCM.jpg" width="709" height="567"/>
+                </li>
+                <li>
+                    <img src="img3.webp" width="1036" height="1381"/>
+                </li>
+                <li>
+                    <img src="img/stream.png" width="1011" height="922"/>
+                </li>
+                <li>
+                    <a href="img/index.html">img</a>
+                </li>
+            </ul>
+        </li>
+    </ul>
+
+    <h1>创业~~~~~~~~~~~~~~~~~~~~~~~</h1>
+</body>
